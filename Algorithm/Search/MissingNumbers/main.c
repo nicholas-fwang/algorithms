@@ -27,14 +27,17 @@ int main()
         b[i] = 0;
     }
     
+    // do caching for arr1
     for(i=0; i<n; i++) {
         a[arr1[i]-min]++;
     }
     
+    // do caching for arr2
     for(i=0; i<m; i++) {
         b[arr2[i]-min]++;
     }
     
+    // compare a with b, so if different, index i+min is missing number
     for(i=0; i<100; i++) {
         if(a[i] != b[i]) {
             printf("%d ", i+min);
