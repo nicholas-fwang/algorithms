@@ -1,1 +1,1 @@
-# hackerrank
+# algorithms
