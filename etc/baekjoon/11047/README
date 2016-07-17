@@ -1,0 +1,33 @@
+link : https://www.acmicpc.net/problem/11047
+
+input example 1 :
+10 4200
+1
+5
+10
+50
+100
+500
+1000
+5000
+10000
+50000
+
+output example 1 :
+6
+
+input example 2 :
+10 4790
+1
+5
+10
+50
+100
+500
+1000
+5000
+10000
+50000
+
+output example 2 :
+12
