@@ -4,8 +4,9 @@
 using namespace std;
 
 const double PI = 2.0 * acos(0.0);
-const double EPSILON = 0;
+const double EPSILON = 0.001;
 
+//-------------------------------------------------------------------
 struct vector2 {
     double x, y;
     
@@ -81,7 +82,9 @@ struct vector2 {
         return r * r.dot(*this);
     }
 };
+//-------------------------------------------------------------------
 
+//-------------------------------------------------------------------
 // 원점을 기준으로 점 b가 점 a의 반시계 방향에 있으면 양수, 시계 방향이면 음수를 반환한다
 // 외적 결과가 0이면 vector a(OA)와 b(OB)는 평행하다
 double ccw(vector2 a, vector2 b) {
@@ -93,7 +96,9 @@ double ccw(vector2 a, vector2 b) {
 double ccw(vector2 p, vector2 a, vector2 b) {
     return ccw(a-p, b-p);
 }
+//-------------------------------------------------------------------
 
+//-------------------------------------------------------------------
 // 점 a와 b를 포함하는 직선과 c, d를 포함하는 직선의 교차여부를 반환하고 교차한다면 교차한 점을 x에 입력하는 함수
 bool lineIntersection(vector2 a, vector2 b,
                      vector2 c, vector2 d, vector2& x) {
@@ -105,7 +110,9 @@ bool lineIntersection(vector2 a, vector2 b,
     x = a + (b - a) * ((c - a).cross(d - c) / det);
     return true;
 }
+//-------------------------------------------------------------------
 
+//-------------------------------------------------------------------
 // 선분(a,b)와 선분(c,d)가 평행할 때, 한 점에서 겹치는지 확인한다
 bool parallelSegments(vector2 a, vector2 b,
                      vector2 c, vector2 d, vector2& p) {
@@ -154,7 +161,9 @@ bool segmentIntersection(vector2 a, vector2 b,
     return inBoundingRectangle(p, a, b) &&
         inBoundingRectangle(p, c, d);
 }
+//-------------------------------------------------------------------
 
+//-------------------------------------------------------------------
 // 두 선분(a,b), (c,d)의 교차점이 있는지 여부를 판단한다
 bool segmentIntersects(vector2 a, vector2 b,
                       vector2 c, vector2 d) {
@@ -180,7 +189,9 @@ bool segmentIntersects(vector2 a, vector2 b,
     // ab 또는 cd 둘 중 하나가 0인 경우는 두 선분 중 하나의 끝점이 다른 선분에 닿아있을 경우이다 따라서 이 경우에도 교차한다고 볼 수 있다
     return ab <= 0 && cd <= 0;
 }
+//-------------------------------------------------------------------
 
+//-------------------------------------------------------------------
 // 점 p에서 직선 ab에 수선을 내렸을 때 벡터를 반환한다
 // 이는 벡터 AP를 AB에 사영한 결과와 같다
 vector2 perpendicularFoot(vector2 p, vector2, a, vector2 b) {
@@ -192,6 +203,7 @@ vector2 perpendicularFoot(vector2 p, vector2, a, vector2 b) {
 double pointToLine(vector2 p, vector2 a, vector2 b) {
     return (p - perpendicularFoot(p, a, b)).norm();
 }
+//-------------------------------------------------------------------
 
 int main()
 {
