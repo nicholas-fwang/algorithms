@@ -1,0 +1,13 @@
+link : https://www.algospot.com/judge/problem/read/PINBALL
+
+input example :
+1
+5 5 1 1 5
+22 40 12
+61 26 20
+19 78 21
+51 86 7
+84 57 15
+
+output example :
+0 1 2 1 2 0 3 4
