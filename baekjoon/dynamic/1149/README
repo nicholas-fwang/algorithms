@@ -1,0 +1,11 @@
+link :
+https://www.acmicpc.net/problem/1149
+
+input example :
+3
+26 40 83
+49 60 57
+13 89 99
+
+output example :
+96
