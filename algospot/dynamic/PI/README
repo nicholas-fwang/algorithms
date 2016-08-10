@@ -1,0 +1,17 @@
+link : 
+https://www.algospot.com/judge/problem/read/PI
+
+input example :
+5 
+12341234 
+11111222 
+12122222 
+22222222 
+12673939 
+
+output example :
+4
+2
+5
+2
+14
