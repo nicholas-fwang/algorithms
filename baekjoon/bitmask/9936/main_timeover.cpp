@@ -49,7 +49,7 @@ int cover(int row, int col, int num, int dir)
     }
     
     int ret = INT_MIN;
-    
+ 
     // 도미노를 놓았다
     mask[row][col] = 1;
     mask[row+DIR[dir][0]][col+DIR[dir][1]] = 1;
@@ -65,7 +65,7 @@ int cover(int row, int col, int num, int dir)
             if(n < n-1) {
                 ret = MAX(ret, cover(i, j, num+1, 1) +
                                 board[row][col]+board[row+DIR[dir][0]][col+DIR[dir][1]]);
-            } 
+            }
         }
     }
     
