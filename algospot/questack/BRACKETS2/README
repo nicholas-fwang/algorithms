@@ -1,0 +1,13 @@
+link :
+https://www.algospot.com/judge/problem/read/BRACKETS2
+
+input example :
+3
+()()
+({[}])
+({}[(){}])
+
+output example :
+YES
+NO
+YES
