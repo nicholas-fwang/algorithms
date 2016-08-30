@@ -1,0 +1,14 @@
+link :
+https://www.acmicpc.net/problem/2579
+
+input example :
+6
+10
+20
+15
+25
+10
+20
+
+output example :
+75
