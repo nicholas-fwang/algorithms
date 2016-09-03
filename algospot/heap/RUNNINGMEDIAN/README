@@ -1,0 +1,13 @@
+link :
+https://algospot.com/judge/problem/read/RUNNINGMEDIAN
+
+input example :
+3
+10 1 0
+10 1 1
+10000 1273 4936 
+
+output example :
+19830 
+19850 
+2448920
