@@ -1,0 +1,20 @@
+link :
+https://www.acmicpc.net/problem/11507
+
+input example1 :
+P01K02H03H04
+
+input example2 :
+H02H10P11H02
+
+input example3 :
+P10K10H10T01
+
+output example1 :
+12 12 11 13
+
+output example2 :
+GRESKA
+
+output example3 :
+12 12 12 12
