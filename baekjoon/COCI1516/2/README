@@ -1,0 +1,24 @@
+link :
+https://www.acmicpc.net/problem/11508
+
+input example 1:
+4
+3
+2
+3
+2
+
+input example 2:
+6
+6
+4
+5
+5
+5
+5
+
+output example 1:
+8
+
+output example 2:
+21
