@@ -1,0 +1,11 @@
+link :
+https://www.acmicpc.net/problem/1032
+
+input example :
+3
+config.sys
+config.inf
+configures
+
+output example :
+config????
