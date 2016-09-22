@@ -1,0 +1,18 @@
+link :
+https://www.acmicpc.net/problem/11654
+
+input example :
+A
+C
+0
+9
+a
+z
+
+output example :
+65
+67
+48
+57
+97
+122
