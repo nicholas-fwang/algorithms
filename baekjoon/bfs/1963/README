@@ -1,0 +1,13 @@
+link :
+https://www.acmicpc.net/problem/1963
+
+input example :
+3
+1033 8179
+1373 8017
+1033 1033
+
+output example :
+6
+7
+0
