@@ -2,7 +2,8 @@ link :
 https://www.hackerrank.com/challenges/weather-observation-station-1
 
 <pre>
-Query a list of CITY and STATE from the STATION table.</pre>
+Query a list of CITY and STATE from the STATION table.
+</pre>
 
 ![_config.yml](./table.png)
 
