@@ -13,8 +13,6 @@ vector<int> dijkstra(int src) {
     vector<bool> visited(V, false);
     // src는 최단거리 0, 방문한거로 쳐서 true
     dist[src] = 0;
-    // 잘못된거 아닌가?
-    //visited[src] = true;
     while(true) {
         int closest = INF, here;
         // 모든 정점을 돈다.
