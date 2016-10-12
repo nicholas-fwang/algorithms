@@ -1,0 +1,24 @@
+link :
+https://algospot.com/judge/problem/read/NTHLON
+
+input example :
+3
+5
+1 2
+3 4
+5 6
+7 8
+7 3
+3
+1 100
+21 20
+10 1 
+3
+10 81
+63 71
+16 51
+
+output example :
+11
+111
+IMPOSSIBLE
