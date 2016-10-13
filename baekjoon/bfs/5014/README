@@ -1,0 +1,14 @@
+link :
+https://www.acmicpc.net/problem/5014
+
+input example 1:
+10 1 10 2 1
+
+input example 2:
+100 2 1 1 0
+
+output example 1:
+6
+
+output example 2:
+use the stairs
