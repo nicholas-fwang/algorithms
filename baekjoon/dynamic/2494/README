@@ -1,0 +1,13 @@
+link :
+https://www.acmicpc.net/problem/2494
+
+input example :
+3
+326
+446
+
+output example :
+4
+1 1
+2 1 
+3 -2
