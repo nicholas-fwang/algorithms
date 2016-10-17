@@ -1,0 +1,20 @@
+link :
+https://www.acmicpc.net/problem/1094
+
+input example 1:
+23
+input example 2:
+32
+input example 3:
+64
+input example 4:
+48
+
+output example 1:
+4
+output example 2:
+1
+output example 3:
+1
+output example 4:
+2
