@@ -1,0 +1,19 @@
+link :
+https://www.acmicpc.net/problem/10174
+
+input example :
+6
+Nat tan
+Palindrome 
+123454321
+Dogs and Cats
+**()()**
+1 221
+
+output example :
+Yes
+No
+Yes
+No
+No
+No
