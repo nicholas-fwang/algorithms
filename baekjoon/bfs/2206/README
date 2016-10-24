@@ -1,0 +1,14 @@
+link :
+https://www.acmicpc.net/problem/2206
+
+input example :
+6 4
+0100
+1110
+1000
+0000
+0111
+0000
+
+output example :
+15
