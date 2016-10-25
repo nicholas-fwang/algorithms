@@ -1,0 +1,11 @@
+link :
+https://www.acmicpc.net/problem/10816
+
+input example :
+10
+6 3 2 10 10 10 -10 -10 7 3
+8
+10 9 -5 2 3 4 5 -10
+
+output example :
+3 0 0 1 2 0 0 2
