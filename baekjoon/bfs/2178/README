@@ -1,0 +1,22 @@
+link :
+https://www.acmicpc.net/problem/2178
+
+input example 1:
+4 6
+101111
+101010
+101011
+111011
+
+output example 2:
+15
+
+input example 2:
+4 6
+110110
+110110
+111111
+111101
+
+output example 2:
+9
