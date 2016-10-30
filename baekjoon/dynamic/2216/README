@@ -1,0 +1,10 @@
+link :
+https://www.acmicpc.net/problem/2216
+
+input example :
+10 -1 -5
+abc
+dc
+
+output example :
+7
