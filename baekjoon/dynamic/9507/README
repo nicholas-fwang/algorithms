@@ -1,0 +1,23 @@
+link :
+https://www.acmicpc.net/problem/9507
+
+input example :
+8
+0
+1
+2
+3
+4
+5
+30
+67
+
+output example :
+1
+1
+2
+4
+8
+15
+201061985
+7057305768232953720
