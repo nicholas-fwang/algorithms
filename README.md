@@ -1,5 +1,5 @@
 # algorithms
-based on C/C++
+based on C/C++ and Java
 
 algospot : https://algospot.com/user/profile/6130
 
