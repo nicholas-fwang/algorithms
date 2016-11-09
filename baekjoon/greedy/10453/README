@@ -1,0 +1,11 @@
+link :
+https://www.acmicpc.net/problem/10453
+
+input example :
+2
+aabbabab aaaabbbb
+aabbab abaabb
+
+output example :
+5
+2
