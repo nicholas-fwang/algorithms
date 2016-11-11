@@ -1,0 +1,14 @@
+link :
+https://www.acmicpc.net/problem/9996
+
+input example :
+3
+a*d
+abcd
+anestonestod
+facebook
+
+output example :
+DA
+DA
+NE
