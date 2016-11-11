@@ -1,0 +1,22 @@
+link :
+https://www.acmicpc.net/problem/1935
+
+input example :
+5
+ABC*+DE/-
+1
+2
+3
+4
+5
+
+output example :
+6.20
+
+input example :
+1
+AA+A+
+1
+
+output example :
+3.00
