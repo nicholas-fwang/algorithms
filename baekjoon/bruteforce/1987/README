@@ -1,0 +1,10 @@
+link :
+https://www.acmicpc.net/problem/1987
+
+input example :
+2 4
+CAAB
+ADCB
+
+output example :
+3
