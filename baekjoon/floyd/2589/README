@@ -1,0 +1,13 @@
+link :
+https://www.acmicpc.net/problem/2589
+
+input example :
+5 7
+WLLWWWL
+LLLWLLL
+LWLWLWW
+LWLWLLL
+WLLWLWW
+
+output example :
+8
