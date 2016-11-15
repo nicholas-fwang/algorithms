@@ -1,0 +1,13 @@
+link :
+https://www.acmicpc.net/problem/9019
+
+input example :
+3
+1234 3412
+1000 1
+1 16
+
+output example :
+LL
+L
+DDDD
