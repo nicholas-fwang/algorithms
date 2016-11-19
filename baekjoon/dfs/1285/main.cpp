@@ -2,60 +2,52 @@
 #include <cstdio>
 
 using namespace std;
-
 const int oo = 0x3f3f3f3f;
 
-int map[21][21];
-int n;
-
-int solve(int row, bool reverse);
-void rev(int row);
+int map[20][20];
+int N;
+int solve(int n);
+void rev(int n);
 int main()
 {
-    scanf("%d", &n);
-    for(int i=1; i<=n; i++) {
-        string tmp;
-        cin >> tmp;
-        for(int j=0; j<tmp.size(); j++) {
-            if(tmp[j] == 'H') map[i][j+1] = 0;
-            else map[i][j+1] = 1;
+    scanf("%d", &N);
+    for(int i=0; i<N; i++) {
+        string s;
+        cin >> s;
+        for(int j=0; j<N; j++) {
+            if(s[j] == 'T') map[i][j] = 1;
         }
     }
-    int ret = min(solve(n, true), solve(n, false));
-    printf("%d\n", ret);
+    printf("%d\n", solve(0));
     return 0;
 }
 
-int solve(int row, bool reverse)
+int solve(int n)
 {
-    if(row == 0) {
+    if(n == N) {
         int ret = 0;
-        for(int i=1; i<=n; i++) {
-            int h=0;
-            for(int j=1; j<=n; j++) {
-                if(map[j][i] == 1) h++;
+        for(int i=0; i<N; i++) {
+            int t=0;
+            for(int j=0; j<N; j++) {
+                if(map[j][i] == 1) t++;
             }
-            if(h > n-h) h = n-h;
-            ret += h;
+            if(N-t < t) t = N-t;
+            ret += t;
         }
         return ret;
     }
+    
     int ret = oo;
-    if(reverse) {
-        rev(row);
-        ret = min(ret, solve(row-1, true));
-        ret = min(ret, solve(row-1, false));
-        rev(row);
-    } else {
-        ret = min(ret, solve(row-1, true));
-        ret = min(ret, solve(row-1, false));
-    }  
+    rev(n);
+    ret = min(ret, solve(n+1));
+    rev(n);
+    ret = min(ret, solve(n+1));
     return ret;
 }
-void rev(int row)
+
+void rev(int n)
 {
-    for(int i=1; i<=n; i++) {
-        if(map[row][i] == 1) map[row][i] = 0;
-        else map[row][i] = 1;
+    for(int i=0; i<N; i++) {
+        map[n][i] = 1-map[n][i];
     }
 }
