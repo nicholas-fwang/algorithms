@@ -1,0 +1,26 @@
+link :
+https://www.acmicpc.net/problem/1107
+
+input example 1:
+5457
+3
+6 7 8
+
+output example 1:
+6
+
+input example 2:
+100
+5
+0 1 2 3 4
+
+output example 2:
+0
+
+input example 3:
+500000
+8
+0 2 3 4 6 7 8 9
+
+output example 3:
+11117
