@@ -1,0 +1,10 @@
+link :
+https://www.acmicpc.net/problem/2512
+
+input example :
+4
+120 110 140 150
+485
+
+output example :
+127
