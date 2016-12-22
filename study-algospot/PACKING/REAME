@@ -1,0 +1,30 @@
+link :
+https://algospot.com/judge/problem/read/PACKING
+
+input example :
+2
+6 10
+laptop 4 7
+camera 2 10
+xbox 6 6
+grinder 4 7
+dumbell 2 5
+encyclopedia 10 4
+6 17
+laptop 4 7
+camera 2 10
+xbox 6 6
+grinder 4 7
+dumbell 2 5
+encyclopedia 10 4
+
+output example :
+24 3
+laptop
+camera
+grinder
+30 4
+laptop
+camera
+xbox
+grinder
