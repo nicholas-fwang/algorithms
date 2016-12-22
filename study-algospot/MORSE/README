@@ -1,0 +1,13 @@
+link :
+https://www.algospot.com/judge/problem/read/MORSE
+
+input example :
+3
+2 2 4
+4 8 13
+6 4 1
+
+output example :
+o--o
+--o-ooo-oooo
+------oooo
