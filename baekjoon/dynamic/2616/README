@@ -1,0 +1,10 @@
+link :
+https://www.acmicpc.net/problem/2616
+
+input example :
+7
+35 40 50 10 30 45 60
+2
+
+output example :
+240
