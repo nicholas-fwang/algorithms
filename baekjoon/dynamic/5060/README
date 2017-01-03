@@ -1,0 +1,13 @@
+link :
+https://www.acmicpc.net/problem/5060
+
+input example :
+2
+4 3
+0 9 20 40
+10 4
+0 10 19 30 40 90 140 190 202 210
+
+output example :
+0.2500
+0.3000
