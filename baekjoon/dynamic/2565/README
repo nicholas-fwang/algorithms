@@ -1,0 +1,16 @@
+link :
+https://www.acmicpc.net/problem/2565
+
+input example :
+8 
+1 8 
+3 9 
+2 2 
+4 1 
+6 4 
+10 10 
+9 7 
+7 6
+
+output example :
+3
