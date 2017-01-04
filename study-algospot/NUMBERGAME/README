@@ -1,0 +1,16 @@
+link :
+https://algospot.com/judge/problem/read/NUMBERGAME
+
+input example :
+3 
+5 
+-1000 -1000 -3 -1000 -1000 
+6 
+100 -1000 -1000 100 -1000 -1000 
+10 
+7 -5 8 5 1 -4 -8 6 7 9 
+
+output example :
+-1000
+1100
+7
