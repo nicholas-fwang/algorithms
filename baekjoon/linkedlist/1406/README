@@ -1,0 +1,12 @@
+link :
+https://www.acmicpc.net/problem/1406
+
+input example :
+abcd
+3
+P x
+L
+P y
+
+output example :
+abcdyx

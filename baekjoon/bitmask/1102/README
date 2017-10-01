@@ -1,0 +1,13 @@
+link :
+https://www.acmicpc.net/problem/1102
+
+input example :
+3
+0 10 11
+10 0 12
+12 13 0
+YNN
+3
+
+output example :
+21
