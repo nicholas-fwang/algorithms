@@ -1,0 +1,14 @@
+link :
+https://algospot.com/judge/problem/read/ITES
+
+
+input example :
+3
+8791 20
+5265 5000
+3578452 5000000
+
+output example :
+1
+4
+1049
