@@ -1,0 +1,11 @@
+link :
+https://www.acmicpc.net/problem/5397
+
+input example :
+2
+<<BP<A>>Cd-
+ThIsIsS3Cr3t
+
+output example :
+BAPC
+ThIsIsS3Cr3t
