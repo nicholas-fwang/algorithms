@@ -1,0 +1,20 @@
+link :
+https://algospot.com/judge/problem/read/NERD2
+
+input example :
+2
+4
+72 50
+57 67
+74 55
+64 60
+5
+1 5
+2 4
+3 3
+4 2
+5 1
+
+output example :
+8
+15
