@@ -33,12 +33,10 @@ vector<int> kmpSearch(string H, string N)
       j = pi[j-1];
     }
     if(H[i] == N[j]) {
-      if(j == n-1) {
-        ret.push_back(i-j+2);
-        j = pi[j];
-      }
-      else {
-        j++;
+      j++;
+      if(j == n) {
+        ret.push_back(i-n+1);
+        j = pi[j-1];
       }
     }
   }
