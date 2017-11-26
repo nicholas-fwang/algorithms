@@ -1,60 +1,62 @@
 #include <iostream>
 #include <cstdio>
-#include <string>
-#include <vector>
 #include <algorithm>
+#include <vector>
+#include <string>
 
 using namespace std;
 
-struct Comparator {
-  const vector<int>& group;
-  int t;
-  Comparator(const vector<int>& _group, int _t): group(_group), t(_t) {
+int N, d;
+
+string S;
+
+vector<int> SA;
+
+vector<int> group;
+
+bool cmp(int i, int j) {
+  if(group[i] != group[j]) return group[i] < group[j];
+
+  i += d;
+  j += d;
+  return (i < N && j < N) ? (group[i] < group[j]) : (i > j);
+}
+
+void constructSA() {
+  for(int i=0; i<N; i++) {
+    SA[i] = i;
+    group[i] = S[i];
   }
 
-  bool operator () (int a, int b) {
-    if(group[a] != group[b]) return group[a] < group[b];
-    return group[a+t] < group[b+t];
-  }
-};
+  for(d=1; ;d*=2) {
+    sort(SA.begin(), SA.end(), cmp);
+    vector<int> newGroup(N, 0);
 
-vector<int> getSA(const string& s) {
-  int n = s.size();
-
-  int t = 1;
-  vector<int> group(n+1);
-  for(int i=0; i<n; i++) group[i] = s[i];
-  group[n] = -1;
-  vector<int> perm(n);
-  for(int i=0; i<n; i++) perm[i] = i;
-  while(t < n) {
-    Comparator compareUsing2T(group, t);
-    sort(perm.begin(), perm.end(), compareUsing2T);
-    t *= 2;
-    if(t >= n) break;
-    vector<int> newGroup(n+1);
-    newGroup[n] = -1;
-    newGroup[perm[0]] = 0;
-    for(int i=1; i<n; i++) {
-      if(compareUsing2T(perm[i-1], perm[i])) {
-        newGroup[perm[i]] = newGroup[perm[i-1]] + 1;
-      }
-      else {
-        newGroup[perm[i]] = newGroup[perm[i-1]];
-      }
+    for(int i=0; i<N-1; i++) {
+      newGroup[i+1] = newGroup[i] + cmp(SA[i], SA[i+1]);
     }
-    group = newGroup;
+
+    for(int i=0; i<N; i++) {
+      group[SA[i]] = newGroup[i];
+    }
+
+    if(newGroup[N-1] == N-1) break;
   }
-  return perm;
 }
 
 int main()
 {
-  string s;
-  cin >> s;
-  vector<int> ret = getSA(s);
-  for(int i=0; i<ret.size(); i++) {
-    cout << s.substr(ret[i]) << "\n";
+  cin >> S;
+  N = S.size();
+
+  SA = vector<int>(N);
+  group = vector<int>(N);
+
+  constructSA();
+
+  for(int i=0; i<N; i++) {
+    cout << S.substr(SA[i]) << "\n";
   }
+
   return 0;
 }
