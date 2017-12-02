@@ -11,6 +11,7 @@ int N, d;
 string S;
 
 vector<int> SA;
+vector<int> LCP;
 
 vector<int> group;
 
@@ -44,6 +45,17 @@ void constructSA() {
   }
 }
 
+void getLCP()
+{
+  for(int i=0, k=0; i<N; i++, k = max(k-1, 0)) {
+    if(group[i] == N-1) continue;
+
+    for(int j=SA[group[i]+1]; S[i+k] == S[j+k]; k++);
+
+    LCP[group[i]] = k;
+  }
+}
+
 int main()
 {
   cin >> S;
@@ -53,6 +65,7 @@ int main()
   group = vector<int>(N);
 
   constructSA();
+  getLCP();
 
   for(int i=0; i<N; i++) {
     cout << S.substr(SA[i]) << "\n";
