@@ -1,0 +1,15 @@
+link :
+https://www.acmicpc.net/problem/12837
+
+input example :
+10 6
+1 3 10000
+1 4 -5000
+1 7 -3000
+2 1 10
+1 6 35000
+2 4 10
+
+output example :
+2000
+27000
