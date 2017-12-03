@@ -17,7 +17,7 @@ struct RMQ {
         initMin(array, 0, n-1, 1);
         initMax(array, 0, n-1, 1);
     }
-    
+
     // 최소값을 저장하는 구간트리를 만든다
     int initMin(const vector<int>& array, int left, int right, int node) {
         if(left == right) {
@@ -28,7 +28,7 @@ struct RMQ {
         int rightMin = initMin(array, mid+1, right, node*2+1);
         return rangeMin[node] = min(leftMin, rightMin);
     }
-    
+
     // 최대값을 저장하는 구간트리를 만든다
     int initMax(const vector<int>& array, int left, int right, int node) {
         if(left == right) {
@@ -39,27 +39,27 @@ struct RMQ {
         int rightMax = initMax(array, mid+1, right, node*2+1);
         return rangeMax[node] = max(leftMax, rightMax);
     }
-    
+
     // nodeLeft ~ nodeRight 에서 최소값을 반환한다
-    int queryMin(int left, int right, int node, 
+    int queryMin(int left, int right, int node,
              int nodeLeft, int nodeRight) {
         // nodeLeft,nodeRight가 left,right 범위를 벗어났다
         if(right < nodeLeft || left > nodeRight) {
             return oo;
         }
-        
+
         // nodeLeft,nodeRight가 left,right 안에 포함됐다
         if(left <= nodeLeft && nodeRight <= right) {
             return rangeMin[node];
         }
-        
+
         // 둘이 겹쳐있을 경우
         int mid = (nodeLeft + nodeRight) / 2;
         // 두 자식노드를 재귀호출해 범위를 다시 살펴본다
         return min(queryMin(left, right, node*2, nodeLeft, mid),
                   queryMin(left, right, node*2+1, mid+1, nodeRight));
     }
-    
+
     // nodeLeft ~ nodeRight 에서 최대값을 반환한다
     int queryMax(int left, int right, int node,
                 int nodeLeft, int nodeRight) {
@@ -69,7 +69,7 @@ struct RMQ {
         if(right >= nodeRight && left <= nodeLeft) {
             return rangeMax[node];
         }
-        
+
         int mid = (nodeLeft + nodeRight) / 2;
         return max(queryMax(left, right, node*2, nodeLeft, mid),
                   queryMax(left, right, node*2+1, mid+1, nodeRight));
@@ -78,7 +78,7 @@ struct RMQ {
     int queryMin(int left, int right) {
         return queryMin(left, right, 1, 0, n-1);
     }
-    
+
     int queryMax(int left, int right) {
         return queryMax(left, right, 1, 0, n-1);
     }
@@ -98,7 +98,7 @@ int main()
             arr.push_back(h);
         }
         RMQ rmq = RMQ(arr);
-        
+
         while(Q--) {
             int a,b;
             scanf("%d %d", &a, &b);
